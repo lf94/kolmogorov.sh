@@ -30,4 +30,30 @@ do
 done)
 
 echo "$stdout" | sort -h | uniq
+
+#
+# Example output:
+# 57 src/routes/individuals/index.ts
+# 75 src/routes/index.ts
+# 76 src/routes/support/index.ts
+# 97 src/routes/all/index.ts
+# 97 src/text/index.ts
+# 119 src/server/uploader.ts
+# 121 src/routes/individuals/advanced/index.ts
+# 132 src/errors/index.ts
+# 169 src/routes/individuals/prefix.ts
+# 209 src/utils.ts
+# 242 src/routes/types.ts
+# 274 src/routes/all/overview.ts
+# 345 src/routes/pug/index.ts
+# 797 src/migrations/index.ts
+# 995 src/migrations/1-create-base.ts
+# 1041 src/routes/all/kyc-broker.ts
+# 1216 src/server/oauth2/index.ts
+# ...
+#
+# As we see the most complex file is oauth2/index.ts.
+# This allows us to quickly see where the complex parts of the system are,
+# indepedent of the line count.
+#
 ```
